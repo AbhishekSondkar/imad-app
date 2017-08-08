@@ -36,6 +36,47 @@ var articles = {
     }
 }
 
+function createTemplate(data){
+    var content = `<html>
+    <head>
+         <title>
+        IMAD HASURA ABHISHEK SONDKAR
+    </title>
+    
+    <style>
+        .new{
+                  max-width: 900px;
+                    margin: 0 auto;
+                    padding: 20;
+                    padding-left: 20;
+                    padding-right: 20;
+                    font-family: cursive;
+            }  
+    </style>
+    </head>
+   
+    <body>
+        <div class = "new">
+        <div>
+            <a href='/'>home</a>
+        </div>
+        <hr/>
+        <div>
+            <h3>Article one</h3>
+            
+        </div>
+        <div>
+            <h4>08 AUG 2017</h4>
+        </div>
+        <div>
+            <p>
+                This is my new article volla!!.This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!
+            </p>
+        </div></div>
+    </body>`
+}
+
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
