@@ -40,19 +40,10 @@ function createTemplate(data){
     var content = `<html>
     <head>
          <title>
-        IMAD HASURA ABHISHEK SONDKAR
+        ${title}
     </title>
     
-    <style>
-        .new{
-                  max-width: 900px;
-                    margin: 0 auto;
-                    padding: 20;
-                    padding-left: 20;
-                    padding-right: 20;
-                    font-family: cursive;
-            }  
-    </style>
+     <link href="/ui/style.css" rel= "stylesheet"/>
     </head>
    
     <body>
@@ -62,16 +53,14 @@ function createTemplate(data){
         </div>
         <hr/>
         <div>
-            <h3>Article one</h3>
+             ${head}
             
         </div>
         <div>
-            <h4>08 AUG 2017</h4>
+             ${date}
         </div>
         <div>
-            <p>
-                This is my new article volla!!.This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!
-            </p>
+             ${content}
         </div></div>
     </body>`
 }
