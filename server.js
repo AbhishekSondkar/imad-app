@@ -5,6 +5,37 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
+
+var articles = {
+    'article-one':{
+         head : 'IMAD ARTICLE ONE',
+         title : 'IMAD HASURA ABHISHEK SONDKAR',
+         date : '08 aug 2017',
+         content:` <p>
+                This is my new article volla!!.This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!This is my new article volla!!
+            </p>`
+         
+    },
+    'article-two':{
+         head : 'IMAD ARTICLE ONE',
+         title : 'IMAD HASURA ABHISHEK SONDKAR',
+         date : '10 aug 2017',
+         content:` <p>
+               SECOND ARTICLE
+            </p>`
+         
+    },
+    'article-three':{
+         head : 'IMAD ARTICLE ONE',
+         title : 'IMAD HASURA ABHISHEK SONDKAR',
+         date : '12 aug 2017',
+         content:` <p>
+              THIRD ARTICLE
+            </p>`
+         
+    }
+}
+
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
