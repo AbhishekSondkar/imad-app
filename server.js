@@ -97,9 +97,16 @@ app.get('/:articleName' ,function(req,res){
 });
 
 
-apt.get('/dbtest',function(req,res){
+apt.get('/dbtest',function(req,reult){
    //This is to test the database
-   
+   pool.querry('Select * from test',function (err ,res){
+       if(err){
+           res.status(500).send(err.toString());
+       }
+       else{
+           res.send(JSON.toStringify());
+       }
+   });
 });
 
 
