@@ -104,7 +104,7 @@ apt.get('/dbtest',function(req,reult){
            res.status(500).send(err.toString());
        }
        else{
-           res.send(JSON.toStringify());
+           res.send(JSON.toStringify(result));
        }
    });
 });
