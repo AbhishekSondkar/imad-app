@@ -1,6 +1,15 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var pool = require('pg').pool;
+
+var config = {
+    user : 'abhisondkar121',
+    database : 'abhisondkar121',
+    host :'db.imad.hasura.io',
+    port : '5432',
+    password : process.env.DB_PASSWORD
+};
 
 var app = express();
 app.use(morgan('combined'));
@@ -83,6 +92,12 @@ app.get('/ui/style.css', function (req, res) {
 app.get('/:articleName' ,function(req,res){
     var articleName = req.params.articleName;
    res.send(createTemplate(articles[articleName]));
+});
+
+
+apt.get('/dbtest',function(req,res){
+   //This is to test the database
+   
 });
 
 
