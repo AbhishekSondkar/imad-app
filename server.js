@@ -3,13 +3,13 @@ var morgan = require('morgan');
 var path = require('path');
 var pool = require('pg').pool;
 
-var config = {
+/*var config = {
     user : 'abhisondkar121',
     database : 'abhisondkar121',
     host :'db.imad.hasura.io',
     port : '5432',
     password : 'db-abhisondkar121-98508',
-};
+};*/
 
 var pool = new Pool(config);
 
