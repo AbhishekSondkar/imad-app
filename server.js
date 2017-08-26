@@ -8,7 +8,7 @@ var config = {
     database : 'abhisondkar121',
     host :'db.imad.hasura.io',
     port : '5432',
-    password : process.env.DB_PASSWORD
+    password : 'db-abhisondkar121-98508',
 };
 
 var pool = new Pool(config);
