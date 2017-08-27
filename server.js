@@ -96,7 +96,7 @@ app.get('/ui/style.css', function (req, res) {
 var pool = new Pool(config);
 app.get('/dbtest',function(req, res){
    //This is to test the database
-   pool.query('SELECT * FROM user', function(err, result){
+   pool.query('SELECT * FROM articles', function(err, result){
        if(err){
            res.status(500).send(err.toString());
        }
