@@ -1,9 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-var pool = require('pg').pool;
+//var pool = require('pg').pool;
 
-var config = {
+/*var config = {
     user : 'abhisondkar121',
     database : 'abhisondkar121',
     host :'db.imad.hasura.io',
@@ -14,7 +14,7 @@ var config = {
 var pool = new Pool(config);
 
 var app = express();
-app.use(morgan('combined'));
+app.use(morgan('combined'));*/
 
 
 var articles = {
@@ -97,7 +97,7 @@ app.get('/:articleName' ,function(req,res){
 });
 
 
-apt.get('/dbtest',function(req,reult){
+/*apt.get('/dbtest',function(req,reult){
    //This is to test the database
    pool.querry('Select * from user',function (err ,res){
        if(err){
@@ -107,7 +107,7 @@ apt.get('/dbtest',function(req,reult){
            res.send(JSON.toStringify(result));
        }
    });
-});
+});*/
 
 
 
