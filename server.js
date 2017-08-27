@@ -11,10 +11,10 @@ var path = require('path');
     password : 'db-abhisondkar121-98508',
 };
 
-var pool = new Pool(config);
+var pool = new Pool(config);*/
 
 var app = express();
-app.use(morgan('combined'));*/
+app.use(morgan('combined'));
 
 
 var articles = {
