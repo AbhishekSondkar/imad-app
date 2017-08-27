@@ -91,11 +91,6 @@ app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
-app.get('/:articleName' ,function(req,res){
-    var articleName = req.params.articleName;
-   res.send(createTemplate(articles[articleName]));
-});
-
 var pool = new Pool(config);
 app.get('/dbtest',function(req, res){
    //This is to test the database
@@ -108,6 +103,13 @@ app.get('/dbtest',function(req, res){
        }
    });
 });
+
+app.get('/:articleName' ,function(req,res){
+    var articleName = req.params.articleName;
+   res.send(createTemplate(articles[articleName]));
+});
+
+
 
 
 
