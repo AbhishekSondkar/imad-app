@@ -97,7 +97,7 @@ app.get('/:articleName' ,function(req,res){
 });
 
 var pool = new Pool(config);
-apt.get('/dbtest',function(req,reult){
+app.get('/dbtest',function(req,reult){
    //This is to test the database
    pool.querry('Select * from user',function (err ,res){
        if(err){
