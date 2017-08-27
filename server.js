@@ -104,7 +104,7 @@ app.get('/dbtest',function(req,res){
            res.status(500).send(err.toString());
        }
        else{
-           res.send(JSON.toStringify(result));
+           res.send(JSON.stringify(result));
        }
    });
 });
