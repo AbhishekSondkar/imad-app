@@ -97,7 +97,7 @@ app.get('/:articleName' ,function(req,res){
 });
 
 var pool = new Pool(config);
-app.get('/dbtest',function(req,reult){
+app.get('/dbtest',function(req,res){
    //This is to test the database
    pool.querry('SELECT * FROM user', function(err,result){
        if(err){
