@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 //var pool = require('pg').pool;
 
-/*var config = {
+var config = {
     user : 'abhisondkar121',
     database : 'abhisondkar121',
     host :'db.imad.hasura.io',
@@ -11,7 +11,7 @@ var path = require('path');
     password : 'db-abhisondkar121-98508',
 };
 
-var pool = new Pool(config);*/
+
 
 var app = express();
 app.use(morgan('combined'));
@@ -96,8 +96,8 @@ app.get('/:articleName' ,function(req,res){
    res.send(createTemplate(articles[articleName]));
 });
 
-
-/*apt.get('/dbtest',function(req,reult){
+var pool = new Pool(config);
+apt.get('/dbtest',function(req,reult){
    //This is to test the database
    pool.querry('Select * from user',function (err ,res){
        if(err){
@@ -107,7 +107,7 @@ app.get('/:articleName' ,function(req,res){
            res.send(JSON.toStringify(result));
        }
    });
-});*/
+});
 
 
 
